@@ -1,0 +1,11 @@
+body{
+	background-image: url("/images/skyline.png");
+	height: 70vh;
+    background-color: #D4E9DA;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    
+}
+a{
+	color:black;
+}

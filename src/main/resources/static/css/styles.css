@@ -1,0 +1,74 @@
+body{
+	background-image: url("/images/skyline.png");
+	height: 70vh;
+    background-color: #D4E9DA;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+h1 {
+	color:#6A4900;
+	font-size: 70px;
+	font-family: sans-serif;
+	text-align: center;
+	position: relative;
+	margin-top: 200px;
+	animation: backInDown; 
+  	animation-duration: 2s;
+}
+.container{
+	 height: 200px;
+  	 display: flex;
+  	align-items: center;
+  justify-content: center;
+}
+
+
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #876100;
+  transition: all 1000ms;
+  font-size: 15px;
+  overflow: hidden;
+  outline: 2px solid #876100;
+  
+  animation: backInUp; 
+  animation-duration: 2s;
+}
+
+button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #876100;
+  box-shadow: 4px 5px 17px -4px #876100;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #876100;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+
+button a{
+	 color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+
+/*   #234099    */

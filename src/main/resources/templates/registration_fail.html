@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home - AeroParker</title>
+    <link type="text/css" rel="stylesheet" href="/css/styles_form.css"></link>
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  </head>
+  <body>
+    <div class="container">
+        <div class="card">
+            <a class="login">Registration</a>
+            <a class="p">All fields marked with an asterisk (*) are required</a>
+            <form th:action="@{/process_register}" th:object="${user}" 
+			method="post">
+            <div class="inputBox">
+                <input type="email" th:field="*{email}" required="required">
+                <span class="user">Email</span>
+                <span id="emailError" style="color: red;"> Email already exists!</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="text"th:field="*{title}"  required="required" maxlength="5">
+                <span>Title*</span>
+            </div>
+            
+            <div class="inputBox">
+                <input type="text" th:field="*{first_name}" required="required" >
+                <span>First name*</span>
+            </div>
+            
+             <div class="inputBox">
+                <input type="text" th:field="*{last_name}" required="required" >
+                <span>Last name*</span>
+            </div>
+            
+             <div class="inputBox">
+                <input type="text" th:field="*{address_line_1}" required="required" >
+                <span>Adddress Line 1*</span>
+            </div>
+            <div class="notRequired">
+                <input type="text" th:field="*{address_line_2}" placeholder=" ">
+                <span>Adddress Line 2</span>
+            </div>
+            <div class="notRequired">
+                <input type="text" th:field="*{city}" placeholder=" ">
+                <span>City</span>
+            </div>
+            
+            <div class="inputBox">
+                <input type="text" th:field="*{postcode}" required="required" minlength="3" >
+                <span>PostCode*</span>
+            </div>
+            
+            <div class="notRequired">
+                <input type="text" th:field="*{phone_number}" placeholder=" ">
+                <span>Phone</span>
+            </div>
+            
+            
+
+            <button type="submit" class="enter">Enter</button>
+			</form>
+        </div>
+    </div>
+  </body>
+</html>
